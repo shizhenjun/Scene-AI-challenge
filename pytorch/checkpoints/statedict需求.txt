@@ -1,0 +1,2 @@
+whole_densenet161_places365_statedict.pth.tar
+https://drive.google.com/open?id=10EhxavtNlRMV6pVAjK0KAv6PAMnniIsp

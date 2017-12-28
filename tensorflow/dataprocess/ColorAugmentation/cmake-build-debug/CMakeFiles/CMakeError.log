@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc03f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc03f.dir/build.make CMakeFiles/cmTC_bc03f.dir/build
+make[1]: Entering directory '/home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc03f.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_bc03f.dir/CheckSymbolExists.c.o   -c /home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_bc03f
+/home/wenshao/JetBrain/Clion/clion-2016.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc03f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_bc03f.dir/CheckSymbolExists.c.o  -o cmTC_bc03f 
+CMakeFiles/cmTC_bc03f.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bc03f.dir/build.make:97: recipe for target 'cmTC_bc03f' failed
+make[1]: *** [cmTC_bc03f] Error 1
+make[1]: Leaving directory '/home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bc03f/fast' failed
+make: *** [cmTC_bc03f/fast] Error 2
+
+File /home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7c221/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7c221.dir/build.make CMakeFiles/cmTC_7c221.dir/build
+make[1]: Entering directory '/home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7c221.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7c221.dir/CheckFunctionExists.c.o   -c /home/wenshao/JetBrain/Clion/clion-2016.3/bin/cmake/share/cmake-3.6/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7c221
+/home/wenshao/JetBrain/Clion/clion-2016.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c221.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_7c221.dir/CheckFunctionExists.c.o  -o cmTC_7c221 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7c221.dir/build.make:97: recipe for target 'cmTC_7c221' failed
+make[1]: *** [cmTC_7c221] Error 1
+make[1]: Leaving directory '/home/wenshao/MyProjects/AIChallenger/ImagePreProcess/ColorAugmentation/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7c221/fast' failed
+make: *** [cmTC_7c221/fast] Error 2
+
+
